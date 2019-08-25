@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunlightassessment"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40.0dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+
+            android:text="Enter City Name"
+            android:textColor="@color/black"
+            android:textSize="15.0dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/simpleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Eg: Toronto"
+            android:paddingStart="20.0dp"
+            android:paddingLeft="10.0dp"
+            android:textSize="18.0dp" />
+
+        <Button
+            android:id="@+id/btweather"
+            android:layout_width="150.0dp"
+            android:layout_height="35.0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30.0dp"
+            android:background="@drawable/button_background"
+            android:text="@string/buttontext"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lv1"
+        android:layout_marginLeft="80.0dp"
+        android:layout_marginTop="150.0dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="90sp" />
+
+        <TextView
+
+            android:id="@+id/fetch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dp"
+            android:layout_marginBottom="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="100.0dp"
+            android:theme="@style/RedAccent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvcityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="23.0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvtemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dp"
+
+            android:textColor="@color/black"
+            android:textSize="20.0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvmintemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dp"
+            android:textSize="16.0dp" />
+
+        <TextView
+            android:id="@+id/maincloudy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="10.0dp"
+            android:textSize="25.0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10.0dp"
+            android:textSize="25.0dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:textStyle="bold">
+
+        <TextView
+            android:id="@+id/tvhumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55.0dp"
+            android:textSize="20.0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/texthumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40.0dp"
+            android:layout_marginTop="5.0dp"
+            android:textSize="20.0dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv2"
+        android:layout_marginLeft="70.0dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/lv3"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvclouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20.0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textclouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dp"
+            android:textSize="20.0dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
